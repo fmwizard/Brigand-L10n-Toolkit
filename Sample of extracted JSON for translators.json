@@ -1,0 +1,200 @@
+[
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 1",
+        "original": "Health",
+        "translation": "",
+        "context": "previous line: \ncurrent line: HEALTHNAME=Health\nnext line: METANAME=Meta"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 2",
+        "original": "Meta",
+        "translation": "",
+        "context": "previous line: HEALTHNAME=Health\ncurrent line: METANAME=Meta\nnext line: STATUSNAME=Status"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 3",
+        "original": "Status",
+        "translation": "",
+        "context": "previous line: METANAME=Meta\ncurrent line: STATUSNAME=Status\nnext line: EQUIPNAME=Equip"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 4",
+        "original": "Equip",
+        "translation": "",
+        "context": "previous line: STATUSNAME=Status\ncurrent line: EQUIPNAME=Equip\nnext line: EFFECTSNAME=Effects"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 5",
+        "original": "Effects",
+        "translation": "",
+        "context": "previous line: EQUIPNAME=Equip\ncurrent line: EFFECTSNAME=Effects\nnext line: SKILLSNAME=Skills"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 6",
+        "original": "Skills",
+        "translation": "",
+        "context": "previous line: EFFECTSNAME=Effects\ncurrent line: SKILLSNAME=Skills\nnext line: RESISTNAME=Resist"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 7",
+        "original": "Resist",
+        "translation": "",
+        "context": "previous line: SKILLSNAME=Skills\ncurrent line: RESISTNAME=Resist\nnext line: UPGRADENAME=Character"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 8",
+        "original": "Character",
+        "translation": "",
+        "context": "previous line: RESISTNAME=Resist\ncurrent line: UPGRADENAME=Character\nnext line: ABILITIESNAME=Ability"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 9",
+        "original": "Ability",
+        "translation": "",
+        "context": "previous line: UPGRADENAME=Character\ncurrent line: ABILITIESNAME=Ability\nnext line: PARTYNAME=Team"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 10",
+        "original": "Team",
+        "translation": "",
+        "context": "previous line: ABILITIESNAME=Ability\ncurrent line: PARTYNAME=Team\nnext line: POINTSNAME=Points"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 11",
+        "original": "Points",
+        "translation": "",
+        "context": "previous line: PARTYNAME=Team\ncurrent line: POINTSNAME=Points\nnext line: MONEYNAME=Jink"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 12",
+        "original": "Jink",
+        "translation": "",
+        "context": "previous line: POINTSNAME=Points\ncurrent line: MONEYNAME=Jink\nnext line: HEADSHOTBONUS=2"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 14",
+        "original": "Hacking",
+        "translation": "",
+        "context": "previous line: HEADSHOTBONUS=2\ncurrent line: MINIGAME1NAME=Hacking\nnext line: MINIGAME2NAME=Translation"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 15",
+        "original": "Translation",
+        "translation": "",
+        "context": "previous line: MINIGAME1NAME=Hacking\ncurrent line: MINIGAME2NAME=Translation\nnext line: MINIGAME3NAME=Chinese Dice"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 16",
+        "original": "Chinese Dice",
+        "translation": "",
+        "context": "previous line: MINIGAME2NAME=Translation\ncurrent line: MINIGAME3NAME=Chinese Dice\nnext line: SKILLNAME=0,Vitality"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 17",
+        "original": "Vitality",
+        "translation": "",
+        "context": "previous line: MINIGAME3NAME=Chinese Dice\ncurrent line: SKILLNAME=0,Vitality\nnext line: SKILLDESC=0,Determines your maximum Health."
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 18",
+        "original": "Determines your maximum Health.",
+        "translation": "",
+        "context": "previous line: SKILLNAME=0,Vitality\ncurrent line: SKILLDESC=0,Determines your maximum Health.\nnext line: SKILLNAME=1,Willpower"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 19",
+        "original": "Willpower",
+        "translation": "",
+        "context": "previous line: SKILLDESC=0,Determines your maximum Health.\ncurrent line: SKILLNAME=1,Willpower\nnext line: SKILLDESC=1,Determines your maximum Meta."
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 20",
+        "original": "Determines your maximum Meta.",
+        "translation": "",
+        "context": "previous line: SKILLNAME=1,Willpower\ncurrent line: SKILLDESC=1,Determines your maximum Meta.\nnext line: SKILLNAME=2,Agility"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 21",
+        "original": "Agility",
+        "translation": "",
+        "context": "previous line: SKILLDESC=1,Determines your maximum Meta.\ncurrent line: SKILLNAME=2,Agility\nnext line: SKILLDESC=2,Movement, jumping, and fall resistance."
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 22",
+        "original": "Movement, jumping, and fall resistance.",
+        "translation": "",
+        "context": "previous line: SKILLNAME=2,Agility\ncurrent line: SKILLDESC=2,Movement, jumping, and fall resistance.\nnext line: SKILLNAME=3,Strength"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 23",
+        "original": "Strength",
+        "translation": "",
+        "context": "previous line: SKILLDESC=2,Movement, jumping, and fall resistance.\ncurrent line: SKILLNAME=3,Strength\nnext line: SKILLDESC=3,Melee damage, throwing, and swimming."
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 24",
+        "original": "Melee damage, throwing, and swimming.",
+        "translation": "",
+        "context": "previous line: SKILLNAME=3,Strength\ncurrent line: SKILLDESC=3,Melee damage, throwing, and swimming.\nnext line: SKILLNAME=4,Survival"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 25",
+        "original": "Survival",
+        "translation": "",
+        "context": "previous line: SKILLDESC=3,Melee damage, throwing, and swimming.\ncurrent line: SKILLNAME=4,Survival\nnext line: SKILLDESC=4,Hold your breath and live off the land."
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 26",
+        "original": "Hold your breath and live off the land.",
+        "translation": "",
+        "context": "previous line: SKILLNAME=4,Survival\ncurrent line: SKILLDESC=4,Hold your breath and live off the land.\nnext line: SKILLNAME=5,Stealth"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 27",
+        "original": "Stealth",
+        "translation": "",
+        "context": "previous line: SKILLDESC=4,Hold your breath and live off the land.\ncurrent line: SKILLNAME=5,Stealth\nnext line: SKILLDESC=5,Stay quiet and avoid detection."
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 28",
+        "original": "Stay quiet and avoid detection.",
+        "translation": "",
+        "context": "previous line: SKILLNAME=5,Stealth\ncurrent line: SKILLDESC=5,Stay quiet and avoid detection.\nnext line: SKILLNAME=6,Charisma"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 29",
+        "original": "Charisma",
+        "translation": "",
+        "context": "previous line: SKILLDESC=5,Stay quiet and avoid detection.\ncurrent line: SKILLNAME=6,Charisma\nnext line: SKILLDESC=6,Improve the respect of others."
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 30",
+        "original": "Improve the respect of others.",
+        "translation": "",
+        "context": "previous line: SKILLNAME=6,Charisma\ncurrent line: SKILLDESC=6,Improve the respect of others.\nnext line: SKILLNAME=7,Pistols"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 31",
+        "original": "Pistols",
+        "translation": "",
+        "context": "previous line: SKILLDESC=6,Improve the respect of others.\ncurrent line: SKILLNAME=7,Pistols\nnext line: SKILLDESC=7,Quicker aiming with pistols and SMGs."
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 32",
+        "original": "Quicker aiming with pistols and SMGs.",
+        "translation": "",
+        "context": "previous line: SKILLNAME=7,Pistols\ncurrent line: SKILLDESC=7,Quicker aiming with pistols and SMGs.\nnext line: SKILLNAME=8,Rifles"
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 33",
+        "original": "Rifles",
+        "translation": "",
+        "context": "previous line: SKILLDESC=7,Quicker aiming with pistols and SMGs.\ncurrent line: SKILLNAME=8,Rifles\nnext line: SKILLDESC=8,Quicker aiming with rifles and shotguns."
+    },
+    {
+        "key": "Assets\\BRIGAND - BATTLES\\Scripts\\globals.bsl--line: 34",
+        "original": "Quicker aiming with rifles and shotguns.",
+        "translation": "",
+        "context": "previous line: SKILLNAME=8,Rifles\ncurrent line: SKILLDESC=8,Quicker aiming with rifles and shotguns.\nnext line: SKILLNAME=9,Chemistry"
+    }
+]
