@@ -86,6 +86,7 @@ class LocalizationProcessor:
                         if (original.lower() in ['none', 'response']) or len(translation) == 0:
                             continue
 
+                        # The length of chunked translations (24 characters) is suitable for Chinese, you may need to adjust it for other languages
                         if "name and desc" in file_path or "windows" in file_path:
                             translation = self.chunk_translation(translation)
                         elif "globals" in file_path:
