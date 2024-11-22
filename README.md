@@ -14,7 +14,7 @@ Before starting:
    - The Assets folder will be used as the source for extraction
    - In Assets, remove any language versions you don't need to translate (e.g., folders ending with "(RU)" for Russian, "(ES)" for Spanish, etc.), but don't touch with other original versions
 3. From the remaining folders in Assets, copy all story-related txt files (e.g., "BRIGAND - OAXACA\BRIGAND - OAXACA.txt") to the Stories folder in your working directory
-
+4. This is an extra step due to a minor issue in the game’s source files. To ensure the localization program runs correctly, a manual adjustment is required. In the file "Assets\BRIGAND - PANAMA\Objects\text\textUse.bsl" (you can ignore this step if you don't have BRIGAND - PANAMA), on line 119, there is an invalid character between "altwin=The Ancient Mariner," and "Water, water, every where,/r". Replace this invalid character with a standard English quotation mark ("), then save the file in UTF-8 format.
 ```
 working_directory/
 ├── extract.py

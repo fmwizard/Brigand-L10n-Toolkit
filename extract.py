@@ -127,7 +127,7 @@ class TextExtractor:
             extracted_objects = []
             extracted_windows = []
 
-
+            print("Extracting text from BSL files...Please wait for a while...")
             for subdir, _, files in os.walk(self.root_dir):
                 for file in files:
                     if file.endswith('.bsl'):
@@ -141,6 +141,7 @@ class TextExtractor:
             self.write_json(extracted_globals, os.path.join(self.output_dir, "globals.json"))
             self.write_json(extracted_objects, os.path.join(self.output_dir, "objects.json"))
             self.write_json(extracted_windows, os.path.join(self.output_dir, "windows.json"))
+            print("Text extraction completed.")
         except Exception as e:
             print(f"An error occurred: {e}, exiting...")
         
@@ -150,6 +151,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
