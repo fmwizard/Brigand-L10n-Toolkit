@@ -19,7 +19,8 @@ class LocalizationProcessor:
     def chunk_translation(self, translation, chunk_size=24):
         """Chunk translation into lines of a certain length to avoid the issue of automatic line breaking"""
         if '/r' in translation:
-            return translation
+            t = translation.split('/r')
+            return '/r'.join([self.chunk_translation(i, chunk_size) for i in t])
         return '/r'.join([translation[i:i + chunk_size] for i in range(0, len(translation), chunk_size)])
 
     def create_regex_pattern(self):
@@ -68,7 +69,7 @@ class LocalizationProcessor:
                         shutil.copy(file_path, backup_path)
                         print(f"Fixing might change the original JSON file, so backup created for it: {backup_path}")
                         try:
-                            with open(file_path, 'r') as f:
+                            with open(file_path, 'r', encoding='utf-8') as f:
                                 data = f.read()
                             
                             with open(file_path, 'w', encoding=self.encoding, errors='ignore') as f:
