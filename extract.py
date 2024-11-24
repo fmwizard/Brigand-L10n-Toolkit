@@ -19,12 +19,13 @@ class TextExtractor:
         self.root_dir = root_dir
         self.output_dir = output_dir
 
-        # Translation settings
         self.translation_commands = [
             "desc", "window", "altwin", "editwin",
             "leftwin", "silentwin", "inputwin", "choice"
         ]
-        self.name_commands = ["name", "if_name", "pickname"]
+
+        # commands that have requirements for the right part of the assignment
+        self.name_commands = ["name", "if_name", "pickname", "if_choice"]
         
         self.pattern_globals = re.compile(r"^(.*?(NAME|DESC|TIP))=(.*?)(?:,(.*))?$")
         self.pattern_standard = re.compile(r'^\s*(.*?)=(.*)$')
@@ -32,7 +33,7 @@ class TextExtractor:
     def is_extractable_assignment(self, before_part: str, after_part: str):
         """Check if the assignment is extractable"""
         return before_part.lower() in self.translation_commands or (
-            before_part in self.name_commands and after_part not in ["none", "response"]
+            (before_part in self.name_commands) and (after_part not in ["none", "response", "savegames"])
         )
 
     def extract_entry(
@@ -61,6 +62,7 @@ class TextExtractor:
         else:
             before_part = match.group(1).strip()
             after_part = match.group(2).strip()
+            # modify the is_extractable_assignment function if you want to extract more
             if self.is_extractable_assignment(before_part, after_part):
                 sub_parts = after_part.split(",", 1)
                 for i, part in enumerate(sub_parts):
@@ -85,7 +87,8 @@ class TextExtractor:
         file_path: str,
         global_entries: List,
         object_entries: List,
-        window_entries: List
+        window_entries: List,
+        input_entries: List
     ):
     
         with open(file_path, 'r') as f:
@@ -102,6 +105,8 @@ class TextExtractor:
                     m = re.search(r"current line:\s*(.*?)=", entry[0].context)
                     if m and any(x in m.group(1) for x in ["name", "desc"]):
                         object_entries.extend(entry)
+                    elif m and m.group(1) == "if_choice":
+                        input_entries.extend(entry)
                     else:
                         window_entries.extend(entry)
 
@@ -126,21 +131,24 @@ class TextExtractor:
             extracted_globals = []
             extracted_objects = []
             extracted_windows = []
+            extracted_inputs = []
 
             print("Extracting text from BSL files...Please wait for a while...")
             for subdir, _, files in os.walk(self.root_dir):
                 for file in files:
                     if file.endswith('.bsl'):
                         file_path = os.path.join(subdir, file)
-                        self.extract_file(file_path, extracted_globals, extracted_objects, extracted_windows)
+                        self.extract_file(file_path, extracted_globals, extracted_objects, extracted_windows, extracted_inputs)
             
             extracted_globals = self.deduplicate_entries(extracted_globals)
             extracted_objects = self.deduplicate_entries(extracted_objects)
             extracted_windows = self.deduplicate_entries(extracted_windows)
+            extracted_inputs = self.deduplicate_entries(extracted_inputs)
                     
             self.write_json(extracted_globals, os.path.join(self.output_dir, "globals.json"))
             self.write_json(extracted_objects, os.path.join(self.output_dir, "objects.json"))
             self.write_json(extracted_windows, os.path.join(self.output_dir, "windows.json"))
+            self.write_json(extracted_inputs, os.path.join(self.output_dir, "player inputs.json"))
             print("Text extraction completed.")
         except Exception as e:
             print(f"An error occurred: {e}, exiting...")
