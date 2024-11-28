@@ -44,7 +44,7 @@ Fill in the "translation" field for each JSON entry. We recommend using the [Par
 ### Step 3: Importing Translations
 
 1. Create a new folder in your working directory
-2. Place all translated JSON files in this folder
+2. Place all translated JSON files in this folder (tip: we recommend creating a backup of the translated JSON files in a location outside your working directory before proceeding, just as a precautionary measure)
 3. Run the import script with the following parameters:
    ```bash
    python import.py --encoding [target_encoding] --dir [translation_folder]
