@@ -79,6 +79,7 @@ class LocalizationProcessor:
                                 data = json.load(f)
                         except UnicodeDecodeError as e:
                             print(f"Encoding error loading {file_path}, please check if the file encoding is correct.")
+                            raise e
 
                     if data is None:
                         raise ValueError(f"Due to error loading {file_path}, the process cannot continue.")
