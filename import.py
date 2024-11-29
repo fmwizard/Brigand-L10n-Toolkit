@@ -124,7 +124,22 @@ class LocalizationProcessor:
                 with open(src_path, 'rb') as f:
                     file_data = f.read()
                 for original, translation in sorted_translations:
-                    file_data = file_data.replace(original.encode('windows-1252'), translation.encode(self.encoding))
+                    original_bytes = original.encode('windows-1252')
+                    translation_bytes = translation.encode(self.encoding)
+                    #file_data = file_data.replace(original.encode('windows-1252'), translation.encode(self.encoding))
+                    start = 0
+                    while True:
+                        index = file_data.find(original_bytes, start)
+                        if index == -1:
+                            break
+                        before_valid = (index == 0 or (not chr(file_data[index - 1]).isalnum() and file_data[index - 1] != ord('=')))
+                        after_valid = ((index + len(original_bytes) == len(file_data)) 
+                                       or (not chr(file_data[index + len(original_bytes)]).isalnum() and file_data[index + len(original_bytes)] != ord('=')))
+                        if before_valid and after_valid:
+                            file_data = file_data[:index] + translation_bytes + file_data[index + len(original_bytes):]
+                            start = index + len(translation_bytes)
+                        else:
+                            start = index + len(original_bytes)
                 output_path = os.path.join("Output", base_path[:-4] + ".gam")
                 os.makedirs(os.path.dirname(output_path), exist_ok=True)
                 with open(output_path, "wb") as file:
