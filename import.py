@@ -90,7 +90,7 @@ class LocalizationProcessor:
 
                         # The length of chunked translations (24 characters) is suitable for Chinese, you may need to adjust it for other languages
                         if self.encoding == 'gb2312':
-                            if "name and desc" in file_path or "windows" in file_path:
+                            if "objects" in file_path or "windows" in file_path:
                                 translation = self.chunk_translation(translation)
                             elif "globals" in file_path:
                                 if "current line: TIP=" not in entry["context"]:
